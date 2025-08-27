@@ -35,8 +35,8 @@ npm install -g @abhiz123/todoist-mcp-server
 ### todoist_create_task
 Create new tasks with various attributes:
 * Required: content (task title)
-* Optional: description, due date, priority level (1-4)
-* Example: "Create task 'Team Meeting' with description 'Weekly sync' due tomorrow"
+* Optional: description, due date, priority level (1-4), project
+* Example: "Create task 'Team Meeting' with description 'Weekly sync' due tomorrow in project 'Work'"
 
 ### todoist_get_tasks
 Retrieve and filter tasks:
@@ -62,6 +62,12 @@ Remove tasks using natural language search:
 * Find and delete tasks by name
 * Confirmation messages
 * Example: "Delete the PR review task"
+
+### todoist_get_projects
+Get a list of all available projects:
+* Shows project names, IDs, and colors
+* Useful for finding project names to use in task creation
+* Example: "Show all my projects"
 
 ## Setup
 
@@ -95,6 +101,8 @@ Add to your `claude_desktop_config.json`:
 "Create task 'Team Meeting'"
 "Add task 'Review PR' due tomorrow at 2pm"
 "Create high priority task 'Fix bug' with description 'Critical performance issue'"
+"Create task 'Design review' in project 'Work'"
+"Add task 'Buy groceries' in project 'Personal' due today"
 ```
 
 ### Getting Tasks
@@ -122,6 +130,13 @@ Add to your `claude_desktop_config.json`:
 ```
 "Delete the PR review task"
 "Remove meeting prep task"
+```
+
+### Getting Projects
+```
+"Show all my projects"
+"List available projects"
+"Get project list"
 ```
 
 ## Development
